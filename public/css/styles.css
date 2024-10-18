@@ -1,0 +1,219 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+header {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+}
+
+.home-background {
+    position: relative;
+    background-image: url('/public/images/starwars.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+
+
+.intro-text {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #ffcc00;
+    animation: crawl 30s linear forwards;
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(40deg) scale(1);
+}
+
+.intro-text h1 {
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+
+@keyframes crawl {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -200%;
+        /* Move the text completely off the screen */
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.navbar a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.vehicle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.people h1 {
+    color: #27a4b0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.pagination{
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.pagination a{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover{
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+
+.card {
+    background-color: #222;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: #ffcc00;
+}
+
+.card p {
+    font-size: 0.9rem;
+}
+
+.character-list .card:hover {
+    transform: scale(1.05);
+}
+
+.person-details {
+    width: 100%;
+}
+
+.person-details h2 {
+    color: #ffcc00;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.person-details h3 {
+    color: #27a4b0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.no-data-card {
+    background-color: #222;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+.error-page {
+    text-align: center;
+    margin-top: 2rem;
+    height: 60vh;
+}
+
+.error-page img {
+    width: 300px;
+    margin: 1rem 0;
+
+}
+
+footer {
+    background-color: #111;
+    color: #ffcc00;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}

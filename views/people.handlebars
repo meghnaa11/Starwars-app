@@ -1,0 +1,29 @@
+<div class="people">
+    <h1>Star Wars Characters</h1>
+    <div class="character-list">
+        {{#each peopleList}}
+            <div class="card">
+                <h3>{{name}}</h3>
+                <p>Height: {{height}}</p>
+                <p>Mass: {{mass}}</p>
+                <p>Gender: {{gender}}</p>
+                <p>Hair color: {{hair_color}}</p>
+                <p>Skin color: {{skin_color}}</p>
+                <p>Eye color: {{eye_color}}</p>
+                <p>Skin color: {{skin_color}}</p>
+                <p>Birth year: {{birth_year}}</p>
+                <p>Homeworld: {{homeworldName}}</p>
+                <button><a href="/people/{{id}}">View Vehicles</a></button>
+            </div>
+        {{/each}}
+    </div>
+    <div class="pagination">
+        {{#if previousPage}}
+            <a class="pagination-button" href="?page={{previousPage}}">Previous</a>
+        {{/if}}
+
+        {{#if nextPage}}
+            <a class="pagination-button" href="?page={{nextPage}}">Next</a>
+        {{/if}}
+    </div>
+</div>

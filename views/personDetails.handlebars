@@ -1,0 +1,55 @@
+<div class="person-details">
+  <h2>{{person.name}}</h2>
+
+  <h3>Vehicles</h3>
+  <div class="vehicle-list">
+    {{#if person.vehiclesData.length}}
+      {{#each person.vehiclesData}}
+        <div class="card">
+          <h2>{{this.name}}</h2>
+          <p>Model: {{this.model}}</p>
+          <p>Manufacturer: {{this.manufacturer}}</p>
+          <p>Cost in Credits: {{this.cost_in_credits}}</p>
+          <p>Length: {{this.length}}</p>
+          <p>Max Atmosphering Speed: {{this.max_atmosphering_speed}}</p>
+          <p>Crew: {{this.crew}}</p>
+          <p>Passengers: {{this.passengers}}</p>
+          <p>Cargo Capacity: {{this.cargo_capacity}}</p>
+          <p>Consumables: {{this.consumables}}</p>
+          <p>Vehicle Class: {{this.vehicle_class}}</p>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="no-data-card">
+        No vehicles available for this character.
+      </div>
+    {{/if}}
+  </div>
+
+  <h3>Starships</h3>
+  <div class="vehicle-list">
+    {{#if person.starshipsData.length}}
+      {{#each person.starshipsData}}
+        <div class="card">
+          <h2>{{this.name}}</h2>
+          <p>Model: {{this.model}}</p>
+          <p>Manufacturer: {{this.manufacturer}}</p>
+          <p>Cost in Credits: {{this.cost_in_credits}}</p>
+          <p>Length: {{this.length}}</p>
+          <p>Max Atmosphering Speed: {{this.max_atmosphering_speed}}</p>
+          <p>Crew: {{this.crew}}</p>
+          <p>Passengers: {{this.passengers}}</p>
+          <p>Cargo Capacity: {{this.cargo_capacity}}</p>
+          <p>Consumables: {{this.consumables}}</p>
+          <p>Hyperdrive Rating: {{this.hyperdrive_rating}}</p>
+          <p>MGLT: {{this.MGLT}}</p>
+          <p>Starship Class: {{this.starship_class}}</p>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="no-data-card">
+        No starships available for this character.
+      </div>
+    {{/if}}
+  </div>
+</div>
